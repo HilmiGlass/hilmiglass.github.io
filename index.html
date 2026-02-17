@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية - Hilmi Jabareen Glass</title>
+    <link rel="icon" href="Glass Icon.png" type="image/png"> <!-- إضافة الأيقونة هنا -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background: #f4f4f9;
+            color: #333;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        header {
+            background: #2c3e50; /* تغيير اللون الأزرق إلى اللون الرمادي الداكن */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        header .logo {
+            font-size: 28px;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        /* قائمة اختيار اللغة */
+        .language-selector {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-radius: 5px; /* حواف مربعة */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-selector:hover {
+            background-color: #34495e; /* تغييره إلى لون أغمق */
+            color: white;
+        }
+
+        .language-selector img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-selector:hover img {
+            transform: scale(1.1);
+        }
+
+        .language-selector select {
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 5px; /* حواف مربعة */
+            border: none;
+            background-color: #f4f4f9;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-selector select:hover {
+            background-color: #2c3e50; /* خلفية رمادية داكنة */
+            color: white;
+        }
+
+        /* قسم البطل */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            background: url('Glass.png') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 600px;
+            margin: 10px auto;
+            line-height: 1.5;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* باقي التنسيق */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #2980b9;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* خدمات */
+        .services ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .services li {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .services li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .services li h3 {
+            font-size: 24px;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        .services li p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2980b9;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1d6f8b;
+        }
+
+        /* قسم الاتصال */
+        .contact {
+            background: #ecf0f1;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #2980b9;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .contact a {
+            font-size: 18px;
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* زر واتساب */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366; /* لون واتساب */
+            border-radius: 50%; /* جعل الزر دائري */
+            padding: 15px; /* حجم الزر */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .whatsapp-btn img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1); /* تكبير الزر عند التحويم */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* تحسينات للأجهزة المحمولة */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .services li {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="Glass Icon.png" alt="Hilmi Glass Icon">
+            <h1>Hilmi Jabareen Glass</h1>
+        </div>
+
+        <!-- قائمة اختيار اللغة -->
+        <div class="language-selector">
+            <img src="language-icon.png" alt="Language Icon">
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div>
+            <h2 id="hero-title">أعمالنا المميزة</h2>
+            <p id="hero-description">نحن متخصصون في تقديم أجود أنواع الزجاج بطرق مبتكرة وبأسعار منافسة. اخترنا لك أفضل الحلول لتلبية احتياجاتك في مجال الزجاج. سرعة، أمان، وجودة!</p>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services">
+        <h2 id="services-title">خدماتنا</h2>
+        <ul>
+            <li>
+                <h3 id="service-1-title">ألواح زجاجية</h3>
+                <p id="service-1-description">نقدم لك ألواح زجاجية عالية الجودة للاستخدامات المختلفة، مقاومة للصدمات وعالية الأداء.</p>
+            </li>
+            <li>
+                <h3 id="service-2-title">درابزين زجاجي</h3>
+                <p id="service-2-description">درابزينات زجاجية مبتكرة تجمع بين الجمال والعملية لمظهر عصري وأنيق.</p>
+            </li>
+            <li>
+                <h3 id="service-3-title">زجاج مخصص</h3>
+                <p id="service-3-description">نصنع الزجاج حسب الطلب، بما يتناسب مع احتياجاتك الخاصة، سواء للاستخدام المنزلي أو التجاري.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+        <h3 id="contact-title">اتصل بنا</h3>
+        <p id="contact-description">نحن هنا لتلبية احتياجاتك. إذا كنت ترغب في الاستفسار عن خدماتنا أو تقديم طلب، تواصل معنا عبر:</p>
+        <a id="contact-email" href="mailto:hilmi.jab@gmail.com">البريد الإلكتروني: hilmi.jab@gmail.com</a>
+        <a id="contact-whatsapp" href="https://wa.me/+972543516122" target="_blank">التواصل عبر واتساب</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Copyright &copy; 2026 | <a href="https://discord.com/users/1213168369952624660" target="_blank">Credits to Jovexo</a></p>
+    </footer>
+
+    <!-- زر واتساب -->
+    <a href="https://wa.me/+972543516122" target="_blank" class="whatsapp-btn">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-select").value;
+            if (language == "ar") {
+                document.getElementById("hero-title").innerText = "أعمالنا المميزة";
+                document.getElementById("hero-description").innerText = "نحن متخصصون في تقديم أجود أنواع الزجاج بطرق مبتكرة وبأسعار منافسة. اخترنا لك أفضل الحلول لتلبية احتياجاتك في مجال الزجاج. سرعة، أمان، وجودة!";
+                document.getElementById("services-title").innerText = "خدماتنا";
+                document.getElementById("service-1-title").innerText = "ألواح زجاجية";
+                document.getElementById("service-1-description").innerText = "نقدم لك ألواح زجاجية عالية الجودة للاستخدامات المختلفة، مقاومة للصدمات وعالية الأداء.";
+                document.getElementById("service-2-title").innerText = "درابزين زجاجي";
+                document.getElementById("service-2-description").innerText = "درابزينات زجاجية مبتكرة تجمع بين الجمال والعملية لمظهر عصري وأنيق.";
+                document.getElementById("service-3-title").innerText = "زجاج مخصص";
+                document.getElementById("service-3-description").innerText = "نصنع الزجاج حسب الطلب، بما يتناسب مع احتياجاتك الخاصة، سواء للاستخدام المنزلي أو التجاري.";
+                document.getElementById("contact-title").innerText = "اتصل بنا";
+                document.getElementById("contact-description").innerText = "نحن هنا لتلبية احتياجاتك. إذا كنت ترغب في الاستفسار عن خدماتنا أو تقديم طلب، تواصل معنا عبر:";
+                document.getElementById("contact-email").innerText = "البريد الإلكتروني: hilmi.jab@gmail.com";
+                document.getElementById("contact-whatsapp").innerText = "التواصل عبر واتساب";
+            } else if (language == "en") {
+                document.getElementById("hero-title").innerText = "Our Featured Works";
+                document.getElementById("hero-description").innerText = "We specialize in providing high-quality glass in innovative ways at competitive prices. We've selected the best solutions to meet your needs in glass. Speed, security, and quality!";
+                document.getElementById("services-title").innerText = "Our Services";
+                document.getElementById("service-1-title").innerText = "Glass Panels";
+                document.getElementById("service-1-description").innerText = "We offer high-quality glass panels for various uses, impact-resistant and high-performance.";
+                document.getElementById("service-2-title").innerText = "Glass Railing";
+                document.getElementById("service-2-description").innerText = "Innovative glass railings that combine beauty and functionality for a modern and elegant look.";
+                document.getElementById("service-3-title").innerText = "Custom Glass";
+                document.getElementById("service-3-description").innerText = "We create custom glass based on your specific needs, whether for home or commercial use.";
+                document.getElementById("contact-title").innerText = "Contact Us";
+                document.getElementById("contact-description").innerText = "We're here to meet your needs. If you'd like to inquire about our services or place an order, contact us via:";
+                document.getElementById("contact-email").innerText = "Email: hilmi.jab@gmail.com";
+                document.getElementById("contact-whatsapp").innerText = "Contact us via WhatsApp";
+            } else if (language == "he") {
+                document.getElementById("hero-title").innerText = "העבודות המובחרות שלנו";
+                document.getElementById("hero-description").innerText = "אנחנו מתמחים בהספקת זכוכית איכותית בדרכים חדשניות ובמחירים תחרותיים. בחרנו את הפתרונות הטובים ביותר לענות על הצרכים שלך בזכוכית. מהירות, בטיחות ואיכות!";
+                document.getElementById("services-title").innerText = "השירותים שלנו";
+                document.getElementById("service-1-title").innerText = "לוחות זכוכית";
+                document.getElementById("service-1-description").innerText = "אנו מציעים לוחות זכוכית איכותיים למגוון שימושים, עמידים בפני פגיעות וביצועים גבוהים.";
+                document.getElementById("service-2-title").innerText = "מעקה זכוכית";
+                document.getElementById("service-2-description").innerText = "מעקות זכוכית חדשניים שמשלבים יופי ופונקציונליות למראה מודרני ומסוגנן.";
+                document.getElementById("service-3-title").innerText = "זכוכית מותאמת אישית";
+                document.getElementById("service-3-description").innerText = "אנו מייצרים זכוכית מותאמת אישית בהתאם לצרכים הספציפיים שלך, בין אם לשימוש ביתי או מסחרי.";
+                document.getElementById("contact-title").innerText = "צור קשר";
+                document.getElementById("contact-description").innerText = "אנו כאן כדי לשרת אותך. אם ברצונך לשאול שאלות על השירותים שלנו או לבצע הזמנה, צור קשר באמצעות:";
+                document.getElementById("contact-email").innerText = "אימייל: hilmi.jab@gmail.com";
+                document.getElementById("contact-whatsapp").innerText = "צור קשר בוואטסאפ";
+            }
+        }
+    </script>
+
+</body>
+</html>
