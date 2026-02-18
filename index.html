@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الرئيسية - Hilmi Jabareen Glass</title>
-    <link rel="icon" href="Glass Icon.png" type="image/png"> <!-- إضافة الأيقونة هنا -->
+    <link rel="icon" href="Glass Icon.png" type="image/png">
     <style>
         * {
             margin: 0;
@@ -22,7 +22,7 @@
         }
 
         header {
-            background: #2c3e50; /* تغيير اللون الأزرق إلى اللون الرمادي الداكن */
+            background: #2c3e50;
             padding: 20px;
             display: flex;
             justify-content: space-between;
@@ -56,20 +56,19 @@
             margin-left: 10px;
         }
 
-        /* قائمة اختيار اللغة */
         .language-selector {
             display: flex;
             align-items: center;
             padding: 10px 20px;
             background-color: white;
-            border-radius: 5px; /* حواف مربعة */
+            border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         .language-selector:hover {
-            background-color: #34495e; /* تغييره إلى لون أغمق */
+            background-color: #34495e;
             color: white;
         }
 
@@ -87,7 +86,7 @@
         .language-selector select {
             font-size: 16px;
             padding: 5px 10px;
-            border-radius: 5px; /* حواف مربعة */
+            border-radius: 5px;
             border: none;
             background-color: #f4f4f9;
             outline: none;
@@ -96,11 +95,10 @@
         }
 
         .language-selector select:hover {
-            background-color: #2c3e50; /* خلفية رمادية داكنة */
+            background-color: #2c3e50;
             color: white;
         }
 
-        /* قسم البطل */
         .hero {
             position: relative;
             width: 100%;
@@ -128,7 +126,6 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        /* باقي التنسيق */
         section {
             padding: 50px 20px;
             text-align: center;
@@ -142,7 +139,6 @@
             font-weight: 600;
         }
 
-        /* خدمات */
         .services ul {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -191,7 +187,6 @@
             background-color: #1d6f8b;
         }
 
-        /* قسم الاتصال */
         .contact {
             background: #ecf0f1;
             padding: 50px 20px;
@@ -245,14 +240,13 @@
             text-decoration: underline;
         }
 
-        /* زر واتساب */
         .whatsapp-btn {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #25d366; /* لون واتساب */
-            border-radius: 50%; /* جعل الزر دائري */
-            padding: 15px; /* حجم الزر */
+            background-color: #25d366;
+            border-radius: 50%;
+            padding: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             z-index: 1000;
         }
@@ -263,11 +257,10 @@
         }
 
         .whatsapp-btn:hover {
-            transform: scale(1.1); /* تكبير الزر عند التحويم */
+            transform: scale(1.1);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* تحسينات للأجهزة المحمولة */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 30px;
@@ -296,7 +289,6 @@
             <h1>Hilmi Glass</h1>
         </div>
 
-        <!-- قائمة اختيار اللغة -->
         <div class="language-selector">
             <img src="language-icon.png" alt="Language Icon">
             <select id="language-select" onchange="changeLanguage()">
@@ -403,4 +395,3 @@
 
 </body>
 </html>
-
