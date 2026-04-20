@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=MAUpHELp2vVE&format=png&color=000000">
+<title id="siteTitle">زجاج حلمي | فخامة الزجاج</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.5/dist/lenis.css">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+    if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
+    window.scrollTo(0, 0);
+</script>
+</head>
+<body>
+
+<div id="loader"><div class="spinner"></div></div>
+
+<header>
+  <a href="#" class="logo" id="logoText" onclick="event.preventDefault(); lenis.scrollTo(0);"><i class="fa-solid fa-gem"></i> زجاج حلمي</a>
+  <div class="menu-toggle" id="menuBtn"><span></span><span></span><span></span></div>
+  <nav id="navMenu">
+    <a data-i18n="navHome" href="#home" class="nav-link"><i class="fa-solid fa-house"></i> الرئيسية</a>
+    <a data-i18n="navServices" href="#services" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> الخدمات</a>
+    <a data-i18n="navWhy" href="#why" class="nav-link"><i class="fa-solid fa-circle-question"></i> ليش تختارنا؟</a>
+    <a data-i18n="navProjects" href="#projects" class="nav-link"><i class="fa-solid fa-images"></i> المشاريع</a>
+    <a data-i18n="navContact" href="#contact" class="nav-link"><i class="fa-solid fa-phone"></i> اتصل بنا</a>
+    
+    <div class="lang-menu" id="langMenu">
+      <div class="lang-selected" id="langSelected">
+        <span><i class="fa-solid fa-globe" style="margin-inline-end: 8px; color: var(--primary);"></i><span id="currentLangText">العربية</span></span>
+        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+      </div>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option" onclick="changeLanguage('ar')">العربية</div>
+        <div class="lang-option" onclick="changeLanguage('en')">English</div>
+        <div class="lang-option" onclick="changeLanguage('he')">עברית</div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content reveal">
+    <h1 data-i18n="heroTitle">حلول زجاج أنيقة وفاخرة تضيف لمسة عصرية وجودة عالمية لكل مساحة</h1>
+    <a href="https://wa.me/+972543516122" class="btn">
+        <i class="fa-brands fa-whatsapp"></i> <span data-i18n="heroBtn">اطلب الآن!</span>
+    </a>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title reveal" data-i18n="servicesTitle">خدماتنا</h2>
+  <div class="services">
+    <div class="card reveal"><i class="fa-solid fa-layer-group"></i><h3 data-i18n="service1">ألواح زجاجية</h3><p data-i18n="service1Desc">مقاومة للصدمات والحرارة بأعلى جودة عالمية</p></div>
+    <div class="card reveal"><i class="fa-solid fa-stairs"></i><h3 data-i18n="service2">درابزين زجاجي</h3><p data-i18n="service2Desc">تصاميم عصرية آمنة وأنيقة للمنازل والشركات</p></div>
+    <div class="card reveal"><i class="fa-solid fa-ruler-combined"></i><h3 data-i18n="service3">زجاج مخصص</h3><p data-i18n="service3Desc">تفصيل حسب الطلب بدقة عالية لتناسب ذوقك</p></div>
+  </div>
+</section>
+
+<section id="why">
+  <h2 class="section-title reveal" data-i18n="whyTitle">ليش تختارنا؟</h2>
+  <div class="why">
+    <div class="why-box reveal"><i class="fa-solid fa-award"></i><h3 data-i18n="why1">جودة عالمية</h3><p data-i18n="why1Desc">نستخدم أفضل المواد المعتمدة والمضمونة</p></div>
+    <div class="why-box reveal"><i class="fa-solid fa-clock"></i><h3 data-i18n="why2">التزام بالمواعيد</h3><p data-i18n="why2Desc">نقدر وقتك ونسلم المشاريع في موعدها تماماً</p></div>
+    <div class="why-box reveal"><i class="fa-solid fa-briefcase"></i><h3 data-i18n="why3">خبرة طويلة</h3><p data-i18n="why3Desc">أكثر من 15 سنة من الإبداع في عالم الزجاج</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title reveal" data-i18n="portfolioTitle">مشاريعنا</h2>
+  <div class="project-placeholder reveal" data-i18n="projectsPlaceholder"></div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title reveal" data-i18n="contactTitle">اتصل بنا</h2>
+  <div id="contact-container" class="reveal">
+    <form class="contact-form" id="contactForm">
+      <input type="text" data-i18n-placeholder="pName" required>
+      <input type="email" data-i18n-placeholder="pEmail" required>
+      <input type="tel" data-i18n-placeholder="pPhone" style="direction: inherit;" required>
+      <textarea data-i18n-placeholder="pMessage" rows="4" required></textarea>
+      <button type="button" class="btn-submit" id="submitBtn" onclick="handleFormSubmission()">
+        <span class="btn-spinner" id="btnSpinner" style="display:none; width:20px; height:20px; border:3px solid rgba(255,255,255,0.3); border-top-color:#fff; border-radius:50%; animation:spin .6s linear infinite;"></span>
+        <span id="btnLabel"><i class="fa-solid fa-paper-plane" style="margin-inline-end: 10px;"></i> <span data-i18n="sendBtn">إرسال</span></span>
+      </button>
+    </form>
+    <div id="errorDisplay" class="error-card">
+        <i class="fa-solid fa-triangle-exclamation" style="color:var(--error); font-size:24px;"></i>
+        <span data-i18n="errorText"></span>
+    </div>
+  </div>
+</section>
+
+<footer id="footerText" data-i18n="footer">© 2026 زجاج حلمي | جميع الحقوق محفوظة</footer>
+
+<a href="https://wa.me/+972543516122" class="contact-float" id="contactBtn">
+  <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+</a>
+
+<script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
